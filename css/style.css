@@ -1,4 +1,4 @@
-   @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root{
     --primary-color: purple;
@@ -89,8 +89,7 @@ p{
 /* --------- Navbar Styling --------- */
 
 .navbar{
-    background-color: rgb(53, 4, 53);
-    color: white;
+    background-color: rgb(4, 31, 53);
     height: 60px; /* How long is your navbar?? */
     padding: 2px; /* Add padding to create spacing inside the navbar. */
     box-sizing: border-box; /* Include padding in the height calculation. */
@@ -144,6 +143,10 @@ p{
     border-top: 2px white solid;
 }
 
+.nav-list a.active {
+    color: #0BCEAF;
+}
+
 .navbar .flex{
     justify-content: space-between;
 }
@@ -190,6 +193,7 @@ p{
 
 .hero-text-1{
     color: rgb(255, 102, 0);
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -222,7 +226,7 @@ p{
 
 .social-icons {
     display: grid;
-    margin-top: 3rem;
+    margin-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     width: 150px;
@@ -284,7 +288,7 @@ p{
 .aboutme-header-text {
     position: absolute;
     text-transform: uppercase;
-    color: #0BCEAF;
+    color: #0BCEAF;    
     font-weight: bolder;
     font-size: 40px;
 }
@@ -328,8 +332,8 @@ p{
 }
 
 .about-text {
-    margin-bottom: 1.5rem;
     font-size: 26px;
+    margin-bottom: 1.5rem;
 }
 
 .aboutme-text-contain {
@@ -389,15 +393,17 @@ p{
     font-weight: bolder;
 }
 
-.ee-text-main{
-    align-items: center;
+.ee-row{
+    display: flex;
+    flex-wrap: wrap;
 }
+
+/* .ee-text-main{
+    align-items: center;
+} */
 
 .ee-text-container{
     position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     width: 50%; /* Each container takes up 50% of the row */
     padding: 0 15px; /* Add padding to separate the containers */
 }
@@ -510,21 +516,27 @@ footer {
     text-align: center;
     font-size: 30px;
     background-color: #222;
-    color: purple;
+    color: #0BCEAF;
     padding: 1rem 2rem;
 }
   
 .footer-icons {
-    color: purple;
+    color: #0BCEAF;
     margin: 10px;
 }
   
-.footer-icons:hover {
+.linkedinicon:hover {
     transform: scale(1.1);
-    color: green;
+    color: rgb(0, 132, 255);
     transition: color 1s ease;
 }
-  
+
+.githubicon:hover {
+    transform: scale(1.1);
+    color: white;
+    transition: color 1s ease;
+}
+
 .footer-list {
     font-size: 20px;
     margin-top: 1rem;
@@ -537,7 +549,7 @@ footer {
 }
   
 .footer-list a {
-    color: purple;
+    color: #0BCEAF;
 }
 
 /* --------------- Big Screens ------------------ */
@@ -571,12 +583,17 @@ footer {
 
 .hero-btn{
     margin-top: 10px; /* Creates space for the button. */
-    margin-left: 80px; /* Center it under the location info. */
+    margin-left: 20px; /* Center it under the location info. */
 }
 
 .hero-icons{
     margin-top: 10px; /* Creates space for the buttons. */
-    margin-left: 65px;  /* Make sure it is under the contact me button. */ 
+}
+
+/* ----------------- Big E&E ----------------------*/
+
+.ee-row{
+    padding: 3rem 7rem;
 }
 
 }
@@ -593,7 +610,7 @@ footer {
 
 .nav-list {
     flex-direction: column; /* This bad boy makes the dropdown menu come down as list from top to down line by line. */
-    background-color: rgb(53, 4, 53);
+    background-color: rgb(4, 31, 53);
     position: absolute;
     padding: 0 15px; /* Moves 'a' lists to side. */
     top: 40px; /* Where menu starts to come down from? */
@@ -649,6 +666,10 @@ footer {
 
 .hero-icons{
     padding-right: 20px; /* Makes the icons come closer together. */
+}
+
+.social-icons{
+    margin-left: -0.5rem;
 }
 
 /* --- Small AboutMe --- */
@@ -755,9 +776,22 @@ footer {
     background-color: rgb(255, 102, 0, 0.125)
 }
 
+.color2{
+    color: rgb(255, 102, 0);
+}
+
+.color{
+    color: #0BCEAF; 
+}
+
+.color3{
+    color: rgb(53, 4, 53);
+}
+
 .bghero{
-    background: rgb(102,83,143);
     background: linear-gradient(0deg, rgba(102,83,143,1) 0%, rgba(167,150,109,1) 50%, rgba(148,187,233,1) 100%); /* Will change background colors. Just TESTing things. */
+    background-image: url(../images/Homebg2.jpg);
+    background-size: cover;
 }
 
 .container{
@@ -798,13 +832,6 @@ footer {
     margin: 10px;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
 .btn{
     display: inline-block;
     padding: 10px 20px;
@@ -815,9 +842,11 @@ footer {
     border-radius: 10px;
 }
 
-.btn-outline{
+.btn-home{
     background-color: transparent;
-    border: 1px white solid;
+    border: 1px black solid;
+    color: rgb(255, 102, 0);
+    font-weight: bold;
 }
 
 .btn:hover{

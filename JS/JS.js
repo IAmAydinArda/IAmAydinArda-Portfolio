@@ -34,6 +34,47 @@ navLinks.forEach(link => {
   });
 });
 
+// ---------------------- Navbar Active Links -------------------
+
+// Function to update the active state
+function updateActiveState() {
+  var scrollPosition = window.scrollY;
+  var windowHeight = window.innerHeight;
+  var documentHeight = document.documentElement.scrollHeight;
+
+// Loop through each section and check if it's in the viewport
+navLinks.forEach(function (link) {
+  var sectionId = link.getAttribute("href").substring(1);
+  var section = document.getElementById(sectionId);
+
+  if (
+    (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) ||
+    (windowHeight + scrollPosition >= documentHeight - 2) // Activates last page near the bottom
+    ) {
+      // Remove the "active" class from all links
+      navLinks.forEach(function (link) {
+        link.classList.remove("active");
+      });
+
+      // Add the "active" class to the current link
+      link.classList.add("active");
+      }
+      });
+  }
+
+// Safe measures
+// Update the active state on page load
+updateActiveState();
+
+// Update the active state on scroll
+window.addEventListener("scroll", updateActiveState);
+
+// Update the active state on page load
+updateActiveState();
+
+// Update the active state on scroll
+window.addEventListener("scroll", updateActiveState);
+
 // ----------------------- TypeOut Animation --------------------
 
 class TypeOutAnimation {
@@ -89,7 +130,7 @@ function calculateAge(birthdate) {
 
   if (currentDate.getMonth() < birthDate.getMonth() || // Make sure current month is earlier then birthday date or...
       (currentDate.getMonth() === birthDate.getMonth() && // Current month is same as birthday month and...
-       currentDate.getDate() <= birthDate.getDate())) { // Current date is same or earlier then birthday date.
+       currentDate.getDate() <= birthDate.getDate())) { // Current date is same or earlier than birthday date.
     age--; // if so minus one from the age.
   }
 
@@ -100,7 +141,7 @@ function calculateAge(birthdate) {
 const mybirthdate = "2002-02-19"; // My birthdate in yyyy-mm-dd format
 
 const ageElement = document.getElementById("myage"); // Get the element by id.
-ageElement.textContent = calculateAge(mybirthdate); // Calculate my age by calculateAge function.
+// ageElement.textContent = calculateAge(mybirthdate); // DISABLES CALCULATION Calculate my age by calculateAge function.
 
 // ------------- Update Website Title -------------
 
