@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("message", message);
 
         // Send a POST request to the PHP script using "AJAX".
-        fetch("contactme.php", {
+        fetch("contact.php", {
             method: "POST",
             body: formData,
         })
