@@ -1,0 +1,889 @@
+   @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root{
+    --primary-color: purple;
+    /* dark shades of primary color*/
+    --clr-primary-1: #000;
+    --clr-primary-2: #718f94;
+    --clr-primary-3: #90b494;
+    --clr-primary-4: #96b798;
+    /* primary/main color */
+    --clr-primary-5: #9cb99b;
+    /* lighter shades of primary color */
+    --clr-primary-6: #a8bea1;
+    --clr-primary-7: #bfc8ad;
+    --clr-primary-8: #c6caae;
+    --clr-primary-9: #cdccaf;
+    --clr-primary-10: #f5fbef;
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: #fff;
+    --clr-white: #fff;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(46, 43, 43);
+    line-height: 1.6;
+    padding-top: 60px; /* Adjust the value to match the height of your navbar so content that at the top doesn't stays behind the navbar. */
+}
+
+html,body{
+    overflow-x: hidden; /* TEST Using it untill I find solution for the whiteness at right side. */
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* Removes blue highlights on phones. */
+}
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+.img-container{
+    max-width: 100%;
+    height: auto;
+}
+  
+.img-container img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+  
+
+/* --------- Navbar Styling --------- */
+
+.navbar{
+    background-color: rgb(53, 4, 53);
+    color: white;
+    height: 60px; /* How long is your navbar?? */
+    padding: 2px; /* Add padding to create spacing inside the navbar. */
+    box-sizing: border-box; /* Include padding in the height calculation. */
+    display: flex;
+    align-items: center;
+    position: fixed; /* Makes the navbar follow you. */
+    top: 0; /* Makes sure navbar always stays at top of the screen. */
+    z-index: 100; /* Makes navbar always on top of content z-index wise. */
+    width: 100%; /* Makes sure navbar is width enough to fill the top of the screen. */
+    animation: slideInFromTop 0.6s ease-in-out; /* Adds slide-in animation  making it cool I guess?? */
+}
+
+.menu-toggle {
+    display: none; /* Makes the dropdown menu invisible for computers. */
+    /* cursor: pointer;  makes it so when you click the menu it shows that you clicked with a small blue square. Doesn't look good though. */
+}
+
+.menu-toggle span { /* This bad boy itself is dropdown menu button. Take good care of it. */
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: rgb(255, 102, 0);
+    margin: 6px 100%;
+}
+
+
+.nav-list {
+    display: flex;
+    overflow: hidden; /* Hides scroll bar even if it overflows. */
+    margin: auto;
+}
+
+
+.navbar li{
+    margin: 0 10px;
+}
+
+.navbar li:hover{
+    transform: scale(1.1); /* This bad boy makes navbar's button BIGGER when you hover your cursor over it. */
+}
+
+.navbar a{
+    color: white; /* Navbar's 'a' lists' texts color. */
+    margin: 50px; /* Their spacing between 'a' lists. */
+    font-size: 20px; /* How big are 'a' lists' texts are. */
+}
+
+.navbar a:hover{
+    color: rgb(255, 102, 0); /* 'a' changes color when your cursor hover overs it. */
+    border-bottom: 2px white solid; /* adds a white line to 'a' when you hover over it. */
+    border-top: 2px white solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+/* -------- Hero Styling ---------- */
+
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers horizontally. */
+    margin-bottom: 3rem; /* Divides the sections for TEST purposes. */
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    background-color: #94bbe9;
+}
+
+.hero-main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    
+    justify-content: center;
+}
+
+.hero-img{
+    max-width: 30%;
+    padding-right: 3rem;
+    padding-left: 0;
+    padding-bottom: 3rem;
+}
+
+.hero-img-fluid{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.hero-texts{
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    text-align: left; /* Keep text on the left for larger screens */
+    padding: 1rem; /* Add padding for spacing */
+}
+
+.hero-text-1{
+    color: rgb(255, 102, 0);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero-text-2{
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: rgb(255, 102, 0, 0);
+    -webkit-text-stroke: 2px black;
+}
+
+.developer{
+    color: rgb(255, 102, 0);
+    font-size: 1.5em;
+    padding: 0px 0px 0px 20px;
+}
+
+.developer-sm{
+    display: none;
+}
+
+.hero-icons-anim:hover{
+    transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+    transition: transform 1s ease;
+}
+
+/* ------------ Social Icons ------------ */
+
+.social-icons {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 150px;
+}
+
+.social-icons li {
+    font-size: 2em;
+}
+
+.social-icon {
+    height: 40px;
+}
+  
+.social-icon img {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+.social-icon img:hover {
+    color: var(--clr-primary-5);
+    fill: var(--clr-primary-5);
+}
+
+/* ---------------- About me ------------------ */
+
+.about-header-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-header-text {
+    font-size: 12rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: 1px #dee2e6;
+}
+
+.aboutme-header-text {
+    position: absolute;
+    text-transform: uppercase;
+    color: #0BCEAF;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-img {
+    position: relative;
+    width: 380px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 1.5rem;
+    vertical-align: auto;
+}
+
+.about-img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.about-text-contain {
+    position: relative;
+    width: 40%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.about-text-contain p{
+    text-align: left;
+    padding-left: 15px;
+}
+
+.about-text {
+    margin-bottom: 1.5rem;
+    font-size: 26px;
+}
+
+.aboutme-text-contain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    gap: 15px; /* Add some gap between columns */
+    margin-bottom: 1rem;
+}
+
+.aboutme-column {
+    padding: 0 15px; /* Add padding to columns */
+    text-align: left;
+}
+
+.aboutme-text-header {
+    padding: 0.5rem 0;
+    font-size: 16px;
+}
+
+.aboutme-text {
+    font-size: 15px;
+    color: #6c757d;
+}
+
+/* -------- Education & Expericence ----------- */
+
+.ee-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.ee-header-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ee-header-quality{
+    font-size: 10rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: 1px #dee2e6;
+}
+
+.ee-header-main{
+    position: absolute;
+    text-transform: uppercase;
+    color: #0BCEAF;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.ee-text-main{
+    align-items: center;
+}
+
+.ee-text-container{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%; /* Each container takes up 50% of the row */
+    padding: 0 15px; /* Add padding to separate the containers */
+}
+
+.ee-header-text{
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.ee-border{
+    border-left: 1px solid #0BCEAF;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.ee-text{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.ee-dotcircle{
+    color: #0BCEAF;
+    position: absolute;
+    top: 2px; left: -32px;
+}
+
+.ee-texts{
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.ee-texts2{
+    margin-bottom: 0.5rem;
+}
+  
+/* --------------- Contact ------------------ */
+/* Will get rid of the background and overall change the styling and colors. Did it like that just to TEST things.*/
+
+.contact-main {
+    background-image: url(../images/sample.jpg); 
+    background-size: 2560px 2000px;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    clip-path: polygon(50% 0,100% 13%,100% 77%,50% 100%,0 77%,0 13%); /* Clips the corners of the background. */
+}
+
+.contact-main h1{
+    font-size: 40px;
+}
+
+.contacte-main p{
+    margin: 20px 0px;
+}
+  
+.contact-text {
+    width: 75%;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-main .grid{
+    grid-template-columns: 55% 45%;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.contact-form{
+    position: relative;
+    /* clip-path: polygon(0 0,100% 0,100% 75%,75% 75%,75% 100%,50% 75%,0 75%); Makes it look like a message box. Stole it from Ozan ;) */
+}
+
+.touch-underline{
+    width: 10rem;
+    height: 0.25rem;
+    margin-bottom: 1.25rem;
+    background: green;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-main .form-control textarea{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 10px; /* Increase padding to make the input boxes taller */
+    font-size: 18px; /* Increase font size to make the text larger */
+    height: 80px; /* Increase height to make the input boxes taller */
+}
+
+.contact-main .form-control input[type='text'],
+.contact-main .form-control input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 10px; /* Increase padding to make the input boxes taller */
+    font-size: 18px; /* Increase font size to make the text larger */
+    height: 40px; /* Increase height to make the input boxes taller */
+}
+
+/* -------------- Footer --------------- */
+
+footer {
+    text-align: center;
+    font-size: 30px;
+    background-color: #222;
+    color: purple;
+    padding: 1rem 2rem;
+}
+  
+.footer-icons {
+    color: purple;
+    margin: 10px;
+}
+  
+.footer-icons:hover {
+    transform: scale(1.1);
+    color: green;
+    transition: color 1s ease;
+}
+  
+.footer-list {
+    font-size: 20px;
+    margin-top: 1rem;
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: center; /* Center items horizontally */
+}
+  
+.footer-list li {
+    margin: 0 10px; /* Add spacing between list items */
+}
+  
+.footer-list a {
+    color: purple;
+}
+
+/* --------------- Big Screens ------------------ */
+
+@media (min-width: 769px) {
+
+/* --- Big Hero --- */
+
+.hero-text-1{
+    padding-left: 20px;
+}
+
+.hero-text-2{
+    border-bottom: 2px black dotted; /* Adds dotted cool looking border around it. */
+    border-left: 2px black dotted;
+    border-right: 2px black dotted;
+    border-radius: 70px; /* Makes the border curvy making it cooler I hope? */
+    display: inline-block; /* Makes the border stick to content. */
+    padding: 0 15px 0 15px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.dev-location{
+    padding-left: 20px;
+}
+
+.hero-img{
+    min-width: 240px; /* When in big screen mode it doesn't stays too small. */
+}
+
+.hero-btn{
+    margin-top: 10px; /* Creates space for the button. */
+    margin-left: 80px; /* Center it under the location info. */
+}
+
+.hero-icons{
+    margin-top: 10px; /* Creates space for the buttons. */
+    margin-left: 65px;  /* Make sure it is under the contact me button. */ 
+}
+
+}
+
+/* -------------- Small Screens ------------------ */
+
+@media (max-width: 768px) {
+
+.menu-toggle {
+    display: block;
+}
+
+/* --- Small Navbar --- */
+
+.nav-list {
+    flex-direction: column; /* This bad boy makes the dropdown menu come down as list from top to down line by line. */
+    background-color: rgb(53, 4, 53);
+    position: absolute;
+    padding: 0 15px; /* Moves 'a' lists to side. */
+    top: 40px; /* Where menu starts to come down from? */
+    left: 0; /* Makes it so there is no space and it is completely closing the whole screen siding from the left side. */
+    width: 100%; /* Makes it fit the dropdown menu width wise fit the whole screen. */
+    max-height: 0; /* This badboy makes it start dropdown menu closed. */
+    overflow: hidden; /* Makes if navs are longer then menu fit it with scrolling. */
+    transition: max-height 0.6s ease-in-out; /* This is dropdown animation. */
+}
+
+.nav-list.active {
+    display: flex;
+    max-height: 200px; /* I can add new navs but after ***px it adds a scroll to list so now you also have to scroll down around navs in the list.*/
+}
+
+/* --- Small Hero --- */
+
+.hero-main {
+    flex-direction: column;
+    text-align: center; /* Center text on mobile */
+}
+.hero-img {
+    max-width: 60%;
+    padding: 0;
+}
+.hero-text-2{
+    font-size: 2.2rem; /* font-size for phones. */
+    border-top: 2px black dotted; /* Adds dotted border around it hoping to make it look cool?? */
+    border-left: 2px black dotted;
+    font-style: italic; /* Make the font italic because why not? */
+    padding-left: 0.1em; /* Let's make some space for the border people. */
+}
+
+.developer{
+    display: none;
+}
+
+.developer-sm{
+    display: block;
+    font-size: 18px; 
+    color: rgb(255, 102, 0)
+}
+
+.dev-location{ 
+    display: block;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.hero-btn{
+    margin-top: 5px; /* Creates some space for button. */
+}
+
+.hero-icons{
+    padding-right: 20px; /* Makes the icons come closer together. */
+}
+
+/* --- Small AboutMe --- */
+
+.about-header-text {
+    font-size: 7rem; /* Adjust the font size for smaller screens */
+}
+  
+.aboutme-header-text {
+    font-size: 30px; /* Adjust the font size for smaller screens */
+}
+  
+.about-header {
+    text-align: center; /* Center text on small screens */
+}
+  
+.about-container {
+    flex-direction: column; /* Stack columns on top of each other for small screens */
+}
+  
+.about-img {
+    width: 80%; /* Make the image full width on small screens */
+    max-width: 600px;
+}
+  
+.about-text-contain {
+    width: 100%; /* Make the text container full width on small screens */
+}
+  
+.aboutme-text-contain {
+    grid-template-columns: 1fr; /* Stack columns on top of each other for small screens */
+}
+  
+.aboutme-column {
+    padding: 0; /* Remove padding for small screens */
+    text-align: center; /* Center text on small screens */
+}
+
+@media (max-width: 360px) {
+    
+.about-header-text {
+    font-size: 5rem; /* Adjust the font size for smaller screens */
+}
+
+}
+
+/* --- Small Education & Experience --- */
+
+.ee-header-quality {
+    text-align: center;
+    font-size: 5rem; /* Adjust font size for smaller screens */
+}
+
+.ee-header-main {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    white-space: nowrap;
+}
+
+.ee-text-container {
+    flex: 100%; /* Each container takes full width on smaller screens */
+    margin: 0; /* Remove margin between containers */
+    max-width: 100%; /* Remove max-width restriction */
+}
+
+@media (max-width: 320px) {
+
+.ee-header-quality {
+    font-size: 4rem; /* Adjust font size for smaller screens */
+}
+
+}
+
+/* --- Small Contact --- */
+
+.contact-main{
+    height: 45rem; /* Allow the section to adjust its height based on content */
+    padding: 20px; /* Adds some padding for better spacing on small screens */
+    text-align: left; /* Adjusts text alignment */
+}
+
+.contact-main .grid{
+    grid-template-columns: 1fr; /* Stack columns on top of each other for small screens */
+}
+
+.contact-text{
+    margin-left: 10px;
+}
+
+/* --- Small Footer --- */
+
+@media (max-width: 320px) {
+
+.footer-list{
+    font-size: 16px;
+}        
+
+}
+
+}
+
+/* ------------- Utilities -------------- */
+
+.bgprimary{
+    background-color: rgb(255, 102, 0, 0.125)
+}
+
+.bghero{
+    background: rgb(102,83,143);
+    background: linear-gradient(0deg, rgba(102,83,143,1) 0%, rgba(167,150,109,1) 50%, rgba(148,187,233,1) 100%); /* Will change background colors. Just TESTing things. */
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.contain{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-hero{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-about{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card{
+    background-color: rgb(219, 211, 211);
+    color: rgb(59, 66, 59);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px white solid;
+}
+
+.btn:hover{
+    transform: scale(1.1); /* When you hover over to the button it makes it bigger */
+}
+
+.available{ /* When I am available for work. */
+    color: rgb(2, 185, 2);
+}
+
+.unavailable{ /* When I am not available for work or already working. */
+    color: red;
+}
+
+.flex{
+    display: flex; /* Makes header stand to left while list stands to right */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.circular-frame {
+    width: 200px; /* Set the desired width of the circular frame */
+    height: 200px; /* Set the desired height of the circular frame */
+    border-radius: 50%; /* Make the frame circular */
+    overflow: hidden; /* Hide anything outside the circular frame */
+    border: 3px solid black; /* Add a border to the frame */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow for a 3D effect */
+}
+
+.circular-frame img {
+    display: block;
+    width: 100%; /* Make the image fill the circular frame */
+    height: auto; /* Automatically adjust the height based on the width */
+}
+
+.typewrite .wrap{
+    border-right: 0.08em solid black; /* This is our beatiful typewriter cursor. */
+    animation: 
+    blink-caret .75s step-end infinite; /* Making it look like it is blinking infinitely thanks to going semi-transparent and back to solid. */
+}
+
+
+/* --------------- Animations ------------- */
+
+@keyframes slideInFromTop { /* This bad boy is for our big old navbar sliding down like a cool kid he is. */
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink-caret { /* This is our typewriter cursor's blink animation. */
+/*    from, to { border-color: white}  Starts from visible color as it should be. */
+    50%  { border-color: transparent } /* To semi visible border. */
+}
