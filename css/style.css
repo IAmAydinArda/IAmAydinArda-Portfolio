@@ -52,7 +52,7 @@ body{
 }
 
 html,body{
-    overflow-x: hidden; /* TEST Using it untill I find solution for the whiteness at right side. */
+    overflow-x: hidden; /* Whiteness at the right side. */
 }
 
 ul{
@@ -90,7 +90,7 @@ p{
 
 .navbar{
     background-color: rgb(4, 31, 53);
-    height: 60px; /* How long is your navbar?? */
+    height: 60px; /* How long is our navbar? */
     padding: 2px; /* Add padding to create spacing inside the navbar. */
     box-sizing: border-box; /* Include padding in the height calculation. */
     display: flex;
@@ -128,7 +128,7 @@ p{
 }
 
 .navbar li:hover{
-    transform: scale(1.1); /* This bad boy makes navbar's button BIGGER when you hover your cursor over it. */
+    transform: scale(1.1); /* This makes navbar's button BIGGER when you hover your cursor over it. */
 }
 
 .navbar a{
@@ -157,7 +157,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center; /* Centers horizontally. */
-    margin-bottom: 3rem; /* Divides the sections for TEST purposes. */
+    margin-bottom: 3rem; /* Divides the sections */
     padding-bottom: 3rem;
     min-height: 100vh;
     background-color: #94bbe9;
@@ -418,6 +418,7 @@ p{
     padding-top: 0.5rem;
     padding-left: 1.5rem;
     margin-left: 0.5rem;
+    
 }
 
 .ee-text{
@@ -479,7 +480,7 @@ p{
 
 .contact-form{
     position: relative;
-    /* clip-path: polygon(0 0,100% 0,100% 75%,75% 75%,75% 100%,50% 75%,0 75%); Makes it look like a message box. Stole it from Ozan ;) */
+    /* clip-path: polygon(0 0,100% 0,100% 75%,75% 75%,75% 100%,50% 75%,0 75%); Makes it look like a message box. "Borrowed" it from Ozan ;) */
 }
 
 .touch-underline{
@@ -566,7 +567,7 @@ footer {
     border-bottom: 2px black dotted; /* Adds dotted cool looking border around it. */
     border-left: 2px black dotted;
     border-right: 2px black dotted;
-    border-radius: 70px; /* Makes the border curvy making it cooler I hope? */
+    border-radius: 70px; /* Makes the border curvy making it cooler I hope */
     display: inline-block; /* Makes the border stick to content. */
     padding: 0 15px 0 15px;
     margin-left: 10px;
