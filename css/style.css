@@ -89,7 +89,7 @@ p{
 /* --------- Navbar Styling --------- */
 
 .navbar{
-    background-color: rgb(4, 31, 53);
+    background-color: white;
     height: 60px; /* How long is our navbar? */
     padding: 2px; /* Add padding to create spacing inside the navbar. */
     box-sizing: border-box; /* Include padding in the height calculation. */
@@ -100,6 +100,7 @@ p{
     z-index: 100; /* Makes navbar always on top of content z-index wise. */
     width: 100%; /* Makes sure navbar is width enough to fill the top of the screen. */
     animation: slideInFromTop 0.6s ease-in-out; /* Adds slide-in animation  making it cool I guess?? */
+    box-shadow: var(--light-shadow); /* Adds shadow to navbar to give it 3D look making it stickout from the page. */
 }
 
 .menu-toggle {
@@ -132,15 +133,15 @@ p{
 }
 
 .navbar a{
-    color: white; /* Navbar's 'a' lists' texts color. */
+    color: black; /* Navbar's 'a' lists' texts color. */
     margin: 50px; /* Their spacing between 'a' lists. */
     font-size: 20px; /* How big are 'a' lists' texts are. */
 }
 
 .navbar a:hover{
-    color: rgb(255, 102, 0); /* 'a' changes color when your cursor hover overs it. */
-    border-bottom: 2px white solid; /* adds a white line to 'a' when you hover over it. */
-    border-top: 2px white solid;
+    color: #0BCEAF; /* 'a' changes color when your cursor hover overs it. */
+    border-bottom: 2px #0BCEAF solid; /* adds a white line to 'a' when you hover over it. */
+    border-top: 2px #0BCEAF solid;
 }
 
 .nav-list a.active {
@@ -446,7 +447,7 @@ p{
 /* Will get rid of the background and overall change the styling and colors. Did it like that just to TEST things.*/
 
 .contact-main {
-    background-image: url(../images/sample.jpg); 
+    background-image: url(../images/contactbg.jpeg); 
     background-size: 2560px 2000px;
     height: 40rem;
     display: flex;
@@ -611,7 +612,7 @@ footer {
 
 .nav-list {
     flex-direction: column; /* This bad boy makes the dropdown menu come down as list from top to down line by line. */
-    background-color: rgb(4, 31, 53);
+    background-color: white;
     position: absolute;
     padding: 0 15px; /* Moves 'a' lists to side. */
     top: 40px; /* Where menu starts to come down from? */
@@ -791,7 +792,7 @@ footer {
 
 .bghero{
     background: linear-gradient(0deg, rgba(102,83,143,1) 0%, rgba(167,150,109,1) 50%, rgba(148,187,233,1) 100%); /* Will change background colors. Just TESTing things. */
-    background-image: url(../images/Homebg2.jpg);
+    background-image: url(../images/homebg.jpeg);
     background-size: cover;
 }
 
@@ -831,6 +832,7 @@ footer {
     box-shadow: 0 3px 10px black;
     padding: 20px;
     margin: 10px;
+    margin-bottom: 60px;
 }
 
 .btn{
