@@ -112,7 +112,7 @@ p{
     display: block;
     height: 2px;
     width: 25px;
-    background-color: rgb(255, 102, 0);
+    background-color: #0BCEAF;
     margin: 6px 100%;
 }
 
@@ -193,7 +193,7 @@ p{
 }
 
 .hero-text-1{
-    color: rgb(255, 102, 0);
+    color: black
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -209,7 +209,7 @@ p{
 }
 
 .developer{
-    color: rgb(255, 102, 0);
+    color: black;
     font-size: 1.5em;
     padding: 0px 0px 0px 20px;
 }
@@ -488,7 +488,7 @@ p{
     width: 10rem;
     height: 0.25rem;
     margin-bottom: 1.25rem;
-    background: green;
+    background: #0BCEAF;
     margin-left: auto;
     margin-right: auto;
 }
@@ -653,7 +653,7 @@ footer {
 .developer-sm{
     display: block;
     font-size: 18px; 
-    color: rgb(255, 102, 0)
+    color: black;
 }
 
 .dev-location{ 
@@ -826,8 +826,8 @@ footer {
 }
 
 .card{
-    background-color: rgb(219, 211, 211);
-    color: rgb(59, 66, 59);
+    background-color: #3a3a3a;
+    color: white;
     border-radius: 10px;
     box-shadow: 0 3px 10px black;
     padding: 20px;
@@ -839,7 +839,7 @@ footer {
     display: inline-block;
     padding: 10px 20px;
     cursor: pointer;
-    background: green;
+    background: #0BCEAF;
     color: white;
     border: none;
     border-radius: 10px;
@@ -848,7 +848,7 @@ footer {
 .btn-home{
     background-color: transparent;
     border: 1px black solid;
-    color: rgb(255, 102, 0);
+    color: black;
     font-weight: bold;
 }
 
