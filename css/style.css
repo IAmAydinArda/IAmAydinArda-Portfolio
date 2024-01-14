@@ -621,6 +621,7 @@ footer {
     max-height: 0; /* This badboy makes it start dropdown menu closed. */
     overflow: hidden; /* Makes if navs are longer then menu fit it with scrolling. */
     transition: max-height 0.6s ease-in-out; /* This is dropdown animation. */
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2)
 }
 
 .nav-list.active {
