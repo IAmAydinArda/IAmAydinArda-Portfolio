@@ -1,4 +1,5 @@
 // -------------------- Dropdown Menu -------------------
+
 class DropdownMenu {
   constructor() {
     this.mobileMenu = document.getElementById("mobile-menu");
@@ -7,11 +8,22 @@ class DropdownMenu {
   }
 
   addEventListeners() {
+    // Open/close menu when mobileMenu is clicked
     this.mobileMenu.addEventListener("click", () => this.toggleMenu());
+
+    // Close menu when clicking outside of it
+    document.addEventListener("click", (event) => this.closeMenuOutside(event));
   }
 
   toggleMenu() {
     this.navList.classList.toggle("active");
+  }
+
+  closeMenuOutside(event) {
+    // Check if the clicked element is not part of the dropdown menu
+    if (!this.mobileMenu.contains(event.target) && !this.navList.contains(event.target)) {
+      this.navList.classList.remove("active");
+    }
   }
 }
 

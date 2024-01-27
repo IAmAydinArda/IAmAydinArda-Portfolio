@@ -116,13 +116,11 @@ p{
     margin: 6px 100%;
 }
 
-
 .nav-list {
     display: flex;
     overflow: hidden; /* Hides scroll bar even if it overflows. */
     margin: auto;
 }
-
 
 .navbar li{
     margin: 0 10px;
@@ -615,7 +613,7 @@ footer {
     background-color: white;
     position: absolute;
     padding: 0 15px; /* Moves 'a' lists to side. */
-    top: 40px; /* Where menu starts to come down from? */
+    top: 60px; /* Where menu starts to come down from? */
     left: 0; /* Makes it so there is no space and it is completely closing the whole screen siding from the left side. */
     width: 100%; /* Makes it fit the dropdown menu width wise fit the whole screen. */
     max-height: 0; /* This badboy makes it start dropdown menu closed. */
@@ -627,6 +625,28 @@ footer {
 .nav-list.active {
     display: flex;
     max-height: 200px; /* I can add new navs but after ***px it adds a scroll to list so now you also have to scroll down around navs in the list.*/
+}
+
+.navbar li:hover{
+    transform: scale(1); /* This makes navbar's button BIGGER when you hover your cursor over it. */
+}
+
+.navbar a:hover{
+    color: #0BCEAF; /* 'a' changes color when your cursor hover overs it. */
+    border-bottom: none; /* adds a white line to 'a' when you hover over it. */
+    border-top: none;
+}
+
+.nav-list li {
+    border-bottom: 1px solid black; /* Add a 1px solid line between each list item */
+}
+
+.nav-list li:last-child {
+    border-bottom: none; /* Remove the border from the last list item to avoid an extra line */
+}
+
+.nav-list li:first-child {
+    border-top: 1px solid #ccc; /* Remove the border from the last list item to avoid an extra line */
 }
 
 /* --- Small Hero --- */
